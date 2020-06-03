@@ -3,7 +3,7 @@
 import subprocess
 import argparse
 import random
-import re
+
 
 # Generates a random mac address based on pythons hexidecimal system and random library
 def mac_generator():

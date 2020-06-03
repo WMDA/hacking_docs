@@ -7,7 +7,10 @@ def ip():
     parse = argparse.ArgumentParser()
     parse.add_argument("-ip", dest="ip", help="Needs IP range /24")
     options= parse.parse_args()
-    return options
+    if not options.ip: 
+        parse.error('>> Needs ip address. Use -h for further details.')
+    else:
+        return options
 
 
 def scan(ip):
