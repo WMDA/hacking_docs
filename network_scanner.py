@@ -28,7 +28,6 @@ def scan(ip,interface,timer=5):
         ans = scapy.srp(arp_request_broadcast, timeout=1,iface=interface, verbose=False)[0]
         for i in ans:
             client_dic={'IP':i[1].psrc, 'MAC':i[1].hwsrc}
-            #print(client_dic['IP'])
             if client_dic not in client_list:
                 client_list.append(client_dic)
         timer = timer -1
