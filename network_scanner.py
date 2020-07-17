@@ -34,12 +34,12 @@ def scan(ip,interface,timer=5):
     return client_list
 
 def output(results_list):
+    print('','-'*100,'\n',"\t IP \t\t\tMac address",'\n','-'*100)
     for i in results_list:
         print('\t',i['IP'] + "\t\t" + i['MAC'])
 
 options = ip()
 print('\nScanning please wait:\n ')
-print('','-'*100,'\n',"\t IP \t\t\tMac address",'\n','-'*100)
 start=datetime.now()
 try:
     if options.time:
