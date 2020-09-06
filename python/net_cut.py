@@ -2,6 +2,7 @@ import subprocess
 import netfilterqueue as nfq
 import sys
 import argparse
+import scapy.all as scapy
 
 
 def get_arguments():
@@ -11,7 +12,10 @@ def get_arguments():
     return options
 
 def packet_processor(packet):
-    print(packet)
+    scapy_packet =scapy.IP(packet.get_payload())
+    print(scapy_packet.show())
+    packet.accept()
+
 
 try:
     options=get_arguments()
@@ -24,6 +28,6 @@ try:
     queue.bind(0, packet_processor)
     queue.run()
 except KeyboardInterrupt:
-    print('User requested termination...flusing IP tables')
+    print('\nUser requested termination...flusing IP tables')
     subprocess.call(["iptables","--flush",])
     sys.exit()
