@@ -3,6 +3,7 @@
 import subprocess
 import argparse
 import random
+import re
 
 
 # Generates a random mac address based on pythons hexidecimal system and random library
@@ -41,6 +42,7 @@ def mac_checker(interface):
 
 
 options = get_arguments()
+os.system(options.interface, + '')
 change_mac(options.interface, options.mac)
 mac_value= mac_checker(options.interface)
 
