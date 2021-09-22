@@ -23,3 +23,6 @@ use Mimikatz in metasploit for this
 ~~~
 load kiwi
 ~~~
+
+- LSASS (Local Security Authority Subsystem Service) is a process in windows that is
+resonsible for enforcing security (authentication etc)
