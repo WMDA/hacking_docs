@@ -43,7 +43,7 @@ Normal output.
 Higher is faster but more noisey.
 
 -p 
-Port range to be scanned (-p 80 scans port 80. -p[-1024] scans all ports <= 1024, -p- scans all ports.).
+Port range to be scanned (-p 80 scans port 80. -p-1024 scans all ports <= 1024, -p- scans all ports.).
 
 --script 
 Selects nmap script to use (--script=vuln uses vuln scripts)
