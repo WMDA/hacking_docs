@@ -60,7 +60,7 @@ Telenet:
 - Telenet establishes connection and becomes a virtual terminal.
 - Mainly replaced by ssh.
 - No security everything is plain text.
-- port 23 over TCP (same as ssh).
+- port 23 over TCP/UDP.
 
 Connecting to telenet
 
