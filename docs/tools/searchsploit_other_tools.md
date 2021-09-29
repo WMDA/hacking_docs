@@ -27,3 +27,17 @@ Useful flags:
 - whois (query who a domain name is registered to)
 - traceroute (traces packet route)
 - dig (manually query recursive DNS servers for information) 
+
+## tcpdump
+
+tcpdump (https://danielmiessler.com/study/tcpdump/)
+- Analyses network traffic
+- Packet analyser
+- Prints  out a description of the contents of packets on a network interface   
+
+Example of usage
+~~~
+tcpdump ip proto \\icmp -i [interface]
+~~~
+
+This searches for icmp (pings) to a interface

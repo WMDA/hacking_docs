@@ -52,9 +52,9 @@ Connects to SMB servers
 
 To see if "Anonymous" login use -U "Anonymous" and skip password
 
-## Telenet
+## Telnet
 
-Telenet:
+Telnet:
 
 - An application that can connect and excute remote commands on a remote machine running telenet.
 - Telenet establishes connection and becomes a virtual terminal.
@@ -68,6 +68,7 @@ Connecting to telenet
 telnet [ip] [port]
 ~~~
 
+Once inside telenet all commands need to start with .RUN
 
 ## FTP 
 	
@@ -80,8 +81,14 @@ File transport protocol:
 - Has two types of connections: active connection (the client opens a port and listens. The server is required to actively connect to it) and
 passive (the server opens a port and listens (passively) and the client connects to it.)
 - Seperation of channels means commands can be sent and data transfered at the same so is efficient. 
-- USes port 21
+- Uses port 21
+- Similar to telnet data is plain text.
   
+### Connecting to FTP 
+
+~~~
+ftp [options] [ip] [optional port]
+~~~
 
 
 
