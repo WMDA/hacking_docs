@@ -21,21 +21,21 @@ enum4linux [-OPTIONS] IP
 ~~~
 - Enumerates SMB on both windows and linux
 
-- Flags
--U (get userlist)
--M (machine list)
--N (namelist dump)
--P (get password policy information)
--G (get group and member list)
--d (be detailed, applies to -U and -S)
--u (specify username to use (default ""))  
--p (specify password to use (default "")) 
--r (enumerate users via RID cycling) 
--o (Get OS information)
--i (Get printer information)
--n (Do an nmblookup (similar to nbtstat))
+- Flags  
+-U (get userlist)  
+-M (machine list)  
+-N (namelist dump)  
+-P (get password policy information)  
+-G (get group and member list)  
+-d (be detailed, applies to -U and -S)  
+-u (specify username to use (default ""))    
+-p (specify password to use (default ""))   
+-r (enumerate users via RID cycling)   
+-o (Get OS information)  
+-i (Get printer information)  
+-n (Do an nmblookup (similar to nbtstat))  
 
--a Does everything (-U -S -G -P -r -o -n -i)
+-a Does everything (-U -S -G -P -r -o -n -i)  
 
 ### Exploiting SMB
 
@@ -45,10 +45,10 @@ smbclient //IP//share [-options]
 
 Connects to SMB servers
 
-- Flags
+- Flags  
 
--U (To specify the user, needs to be in)
--p (To specify the port)
+-U (To specify the user, needs to be in)  
+-p (To specify the port)  
 
 To see if "Anonymous" login use -U "Anonymous" and skip password
 
@@ -60,7 +60,7 @@ Telnet:
 - Telenet establishes connection and becomes a virtual terminal.
 - Mainly replaced by ssh.
 - No security everything is plain text.
-- port 23 over TCP (same as ssh).
+- port 23 over TCP/UDP.
 
 Connecting to telenet
 
