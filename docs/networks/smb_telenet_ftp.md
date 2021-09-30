@@ -4,7 +4,7 @@
 
 Server Message Block protocol: 
 
-- A client-side protocol is used to sharing access to files, printers, serial ports and other network resources.
+- A client-side protocol used for sharing files, accessing printers, serial ports and other network resources.
 - Server makes file systems and other resources available to client. 
 - Once connected client can open/read/write 
 - A response-request protocol (transmits multiple messages between client and server).
