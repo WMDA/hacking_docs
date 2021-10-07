@@ -18,13 +18,11 @@
 Common Request Headers
 
 
-- Host: 
-
+- Host:
 The host headers tells the server which website we want (web servers can host multiple websites). 
 
 
-- User-Agent: 
-
+- User-Agent:
 This is your browser software and version number (helps format website correctly).
 
 
