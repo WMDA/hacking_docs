@@ -40,7 +40,7 @@ enum4linux [-OPTIONS] IP
 ### Exploiting SMB
 
 ~~~
-smbclient //IP//share [-options]
+smbclient \\\\IP\\share [-options]
 ~~~
 
 Connects to SMB servers
