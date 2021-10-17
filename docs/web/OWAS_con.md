@@ -62,6 +62,7 @@ So the URL encoded NULL terminator is:
 - Change the request with burp
 
 Example
+
 ~~~
 GET /rest/basket/1 HTTP/1.1
 ~~
