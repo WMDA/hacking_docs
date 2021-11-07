@@ -121,6 +121,8 @@ Then run the programme
 sudo LD_LIBRARY_PATH=/tmp apache2
 ~~~
 
+https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/
+
 ## CronJobs File permission
 
 Change a cronjob that is running by root user to gain a shell.
