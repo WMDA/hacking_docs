@@ -38,20 +38,13 @@ echo "alias pip=pip3" >>.zshrc
 
 #Get git repos
 cd /opt
+git clone https://github.com/carlospolop/PEASS-ng.git
+git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
+wget https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
 
 #Config file structure
 cd
 mkdir hacking 
 mkdir hacking/thm hacking/htb hacking/vulnhub
 mkdir tools
-mkdir tools/linux_privesc tools/
-
-
-
-
-
-
-
-
-
-
+mkdir tools/linux_privesc tools/win_privesc
