@@ -29,12 +29,25 @@ apt-get install sublime-text -y
 
 #Write to .zshrc
 cd
-echo export GOROOT=/usr/lib/go >> .zshrc
-echo export GOPATH=$HOME/go >> .zshrc
-echo export PATH=$GOPATH/bin:$GOROOT/bin:$PATH >> .zshrc
+echo "export GOROOT=/usr/lib/go" >> .zshrc
+echo "export GOPATH=$HOME/go" >> .zshrc
+echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" >> .zshrc
 
-echo alias python=python3 >>.zshrc
-echo alias pip=pip3 >>.zshrc
+echo "alias python=python3" >>.zshrc
+echo "alias pip=pip3" >>.zshrc
+
+#Get git repos
+cd /opt
+
+#Config file structure
+cd
+mkdir hacking 
+mkdir hacking/thm hacking/htb hacking/vulnhub
+mkdir tools
+mkdir tools/linux_privesc tools/
+
+
+
 
 
 
