@@ -3,7 +3,7 @@
 function usage {
   echo -e '\nScript to get output of LFI from multiple directories. \n\nUSAGE:'
   echo -e '\t-u:\tURL \n\t\tURL to site with local file inclusion. Needs the whole url i.e http://ip/file.php?page='
-  echo -e '\t-n:\tWORDLIST \n\t\tWORDLIST of common places to search for'
+  echo -e '\t-w:\tWORDLIST \n\t\tWORDLIST of common places to search for'
   exit 0
 }
 
