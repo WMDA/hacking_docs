@@ -42,5 +42,7 @@ if __name__ == "__main__":
 
     print(Fore.YELLOW +'\nAttempting to Crack:' + Fore.RESET, zip_file)
   
-    if crack_password(password_list, obj) == False:
+    password = crack_password(password_list, obj) 
+
+    if password == False:
        print(Fore.RED + "Password not found in this file"+ Fore.RESET)
