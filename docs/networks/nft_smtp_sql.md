@@ -19,6 +19,20 @@ How NFT works:
 
 NFTs work on all operating systems.
 
+### Technical aside for NFTs
+
+Remote Procedure Call is a software communication protocol that one program can use to request a service from a program located in another computer on a network without having to understand the network's details.
+
+rpcbind 
+- A server that converts RPC program numbers into universal addresses
+
+mountd
+- rpc.mountd daemon implements the server side of the NFS MOUNT protocol
+
+
+nlockmgr 
+- The lock manager for Network File Systems (NFS).
+
 ### NSF common
 
 - consists of numerous modules (mount and showmount are two) for nfs.
@@ -59,6 +73,12 @@ Execute SUID Bit Bash Executable ->
 
 ROOT ACCESS
 
+## Other protocols
+
+Rsync 
+- a file copying tool. 
+- Copys locally, to/from another host over any remote shell, or to/from a remote rsync daemon.
+- a utility for efficiently transferring and synchronizing files.
 
 ## SMTP
 

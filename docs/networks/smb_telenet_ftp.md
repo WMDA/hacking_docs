@@ -14,6 +14,7 @@ Server Message Block protocol:
 - SMB is windows.
 - Samba is unix.
 
+
 ### Enumerating SMB
 
 ~~~
@@ -43,12 +44,20 @@ enum4linux [-OPTIONS] IP
 smbclient \\\\IP\\share [-options]
 ~~~
 
+or 
+
+
+~~~
+smbclient //<ip>/<share>
+~~~
+
 Connects to SMB servers
 
 - Flags  
 
 -U (To specify the user, needs to be in)  
 -p (To specify the port)  
+-N (No password)
 
 To see if "Anonymous" login use -U "Anonymous" and skip password
 
