@@ -15,7 +15,7 @@ apt-get install terminator -y
 apt-get install gobuster -y
 
 #Set up python.
-apt-get install pip3 -y
+apt-get install python3-pip -y
 apt-get install python3-dev -y
 
 #Install go for metasploit 
@@ -49,3 +49,7 @@ mkdir hacking
 mkdir hacking/thm hacking/htb hacking/vulnhub
 mkdir tools
 mkdir tools/linux_privesc tools/win_privesc
+
+# Python packages
+pip install pwncat-cs
+pip install python-wappalyzer
