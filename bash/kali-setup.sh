@@ -7,6 +7,7 @@
 
 apt-get update
 apt-get upgrade -y
+apt-get distro-upgrade -y
 
 #Install programmes I like
 
@@ -43,7 +44,7 @@ git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
 wget https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
 
 #Config file structure
-cd
+cd ~
 mkdir hacking 
 mkdir hacking/thm hacking/htb hacking/vulnhub
 mkdir tools
