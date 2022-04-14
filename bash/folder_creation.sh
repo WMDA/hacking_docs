@@ -40,6 +40,6 @@ touch readme.md
 
 echo '#' $NAME >> readme.md
 
-echo -e '\n\n## enum \n\n\n\n## shell \n\n\n\n## Privesc' >> readme.md
+echo -e '\n\n## enum \n\n\n\n## exploit \n\n\n\n## Privesc' >> readme.md
 
 echo "Created folder ${NAME} in ${DIRECTORY}"
