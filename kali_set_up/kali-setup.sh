@@ -13,6 +13,7 @@ apt-get distro-upgrade -y
 
 apt-get install terminator -y
 apt-get install gobuster -y
+apt-get install bat -y
 
 #Set up python.
 apt-get install python3-pip -y
