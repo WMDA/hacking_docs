@@ -20,5 +20,7 @@ set PATH=/tmp:PATH
 
 run command
 ```
+## Check History
 
-
+Check if user typed passwords etc to terminal
+```cat ~/.*history | less ```
