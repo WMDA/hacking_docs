@@ -1,3 +1,3 @@
-# learning-ethical-hacking
+# hacking_docs
 
-This is code and notes while I attempt to learning ethical hacking
+A collection of documentation I have done while playing tryhackme/hackthebox/doing the ejpt
