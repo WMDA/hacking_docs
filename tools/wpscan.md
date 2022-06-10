@@ -19,11 +19,3 @@ m    Media IDs range. e.g m1-15
      Note: Permalink setting must be set to "Plain" for those to be detected
      Range separator to use: '-'
      Value if no argument supplied: 1-100
-
-
-
-
-
-
-
-                                                   

@@ -263,3 +263,10 @@ getcap -r / 2>/dev/null
 
 ```ss -tulnp```
 ```lsof -i tcp:<port>```
+
+## Encripytion
+
+```
+gpg --import .asc 
+gpg --decrypt .pgp 
+```

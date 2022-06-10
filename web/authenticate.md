@@ -45,8 +45,6 @@ Level level user exploit
 - Get JWT token from low level user
 - encode into base64
 ```{"typ":"JWT","alg":"NONE"}```
-- encode what payload
--
-
-eyJ0eXAiOiJKV1QiLCJhbGciOiJOT05FIn0K.eyJleHAiOjE1ODY2MjA5MjksImlhdCI6MTU4NjYyMDYyOSwibmJmIjoxNTg2NjIwNjI5LCJpZGVu.
+- encode what payload we want
+- then put that as the jwt token
 
