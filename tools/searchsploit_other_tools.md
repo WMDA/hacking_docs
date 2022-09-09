@@ -13,14 +13,14 @@ CVE-YEAR-NUMBER
 
 ## Searchsploit
 
-~~~
+```
 searchsploit [options] term1 [term2] ... [termN]
 
 Useful flags:
 
 -v verbose output.
 -w shows urls to ExploitDB rather than local path.
-~~~
+```
 
 # Other useful tools
 
@@ -36,8 +36,8 @@ tcpdump (https://danielmiessler.com/study/tcpdump/)
 - Prints  out a description of the contents of packets on a network interface   
 
 Example of usage
-~~~
+```
 tcpdump ip proto \\icmp -i [interface]
-~~~
+```
 
 This searches for icmp (pings) to a interface
