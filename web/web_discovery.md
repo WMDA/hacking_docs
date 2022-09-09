@@ -26,7 +26,7 @@ curl <http address> -v
 
 ## Google Dorking
 
-
+```
 Filter | Example | Description 
 -------------------------------------------------------------------------------------
 site   | site:tryhackme.com | returns results only from the specified website address
@@ -37,3 +37,4 @@ filetype| filetype:pdf | returns results which are a particular file extension
 -------------------------------------------------------------------------------------
 intitle | intitle:admin | returns results that contain the specified word in the title
 -------------------------------------------------------------------------------------
+```
