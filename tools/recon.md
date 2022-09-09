@@ -11,20 +11,31 @@
 ## Recon-ng
 
 ```recon-ng -w <workspace name>``` creates a new work space
+
 ```db schema``` to see the database 
+
 ```db insert domains``` insert domain name into db
+
 ```marketplace search``` search the marketplace for plugins
+
 ```market place info <module name>``` gets info on the module 
+
 ```marketplace install <module name>``` installs module (change install to remove)
 
 modules with a * in the K column need a key while modules with a * in the D column have dependcies.
 
 ```modules search``` shows all installed modules
+
 ```modules load <module name>``` loads the module
+
 ```run``` runs module
+
 ```cntrl + c``` to unload module
+
 ```info``` on loaded module 
+
 ```options list``` to show loaded modules options
+
 ```options set <value>``` set an option in a loaded module
 
 ```keys list``` list all the keys
