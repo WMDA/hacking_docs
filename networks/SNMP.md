@@ -1,6 +1,7 @@
 # SNMP
 
 Simple Network Management Protocol (SNMP):
+- Application layer protocol
 - UDP
 - Is a way for different devices on a network to share information with one another. 
 - It allows devices to communicate even if the devices are different hardware and run different software.
