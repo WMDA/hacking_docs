@@ -3,6 +3,9 @@
 Simple Network Management Protocol (SNMP):
 - Application layer protocol
 - UDP
+- Default port 161
+- facilitates the exchange of management information between network devices. 
+- Uses one of four protocol operations: Get, GetNext, Set, and Trap. 
 - Is a way for different devices on a network to share information with one another. 
 - It allows devices to communicate even if the devices are different hardware and run different software.
 - A protocol used to monitor different devices in the network (like routers, switches, printers, IoTs...).
