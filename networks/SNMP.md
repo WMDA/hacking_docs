@@ -5,6 +5,7 @@ Simple Network Management Protocol (SNMP):
 - Is a way for different devices on a network to share information with one another. 
 - It allows devices to communicate even if the devices are different hardware and run different software.
 - A protocol used to monitor different devices in the network (like routers, switches, printers, IoTs...).
+- Internet Standard protocol for collecting and organizing information about managed devices on IP networks and for modifying that information to change device behaviour.
 - Comes in SNMPv1 and SNMPv2 both send cleartext messages (SNMPv3 doesn't)
 - Stores information in a structure called a Management Information Base (MIB)
 - To retrieve information from machines running SNMP, a requester will send a GET request to the machine, along with a string to authenticate itself. 
