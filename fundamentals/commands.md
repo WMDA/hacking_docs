@@ -270,3 +270,7 @@ getcap -r / 2>/dev/null
 gpg --import .asc 
 gpg --decrypt .pgp 
 ```
+
+## xfreerdp
+
+```xfreerdp /v:IP /u:USERNAME /p:PASSWORD +clipboard /dynamic-resolution /drive:<link to folder to share> -resources,share```
